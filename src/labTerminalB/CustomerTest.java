@@ -28,12 +28,17 @@ public class CustomerTest {
 	}
 
 	
+	/**
+	 * Test 2 Customer rented one movie REGULAR
+	 */
 	@Test
 	public void testStatement2() {
-		me2.addRental(r1);
+		me.addRental(r1);
 		//fail("Not yet implemented");
-		String output2 = "Rental Record for Allah Ditta\r\n" + 
-				"	Speed	12.0";
+		String output2 = "Rental Record for Nadir\r\n" + 
+				"	Spancer	33.5\r\n" + 
+				"Amount owed is 33.5\r\n" + 
+				"You earned 1 frequent renter points";
 		if(output2.equals(me2.statement()))
 		{
 			assert true;
@@ -41,17 +46,25 @@ public class CustomerTest {
 	}
 
 	
+	/**
+	 * Test 3 Customer rented two movies one REGULAR and one NEW_RELEASE
+	 */
 	@Test
 	public void testStatement3() {
+		me2.addRental(r1);
 		me2.addRental(r2);
 		//fail("Not yet implemented");
 		String output3 = "Rental Record for Allah Ditta\r\n" + 
-				"	Spancer	33.5";
+				"	Spancer	33.5\r\n" + 
+				"	Speed	12.0\r\n" + 
+				"Amount owed is 45.5\r\n" + 
+				"You earned 3 frequent renter points";
 		if(output3.equals(me2.statement()))
 		{
 			assert true;
 		}
 	}
+	
 	/*
 	 * TODO 2			10 Marks
 	 * Provide at least two more test cases carefully chosen so that they satisfy our testing
