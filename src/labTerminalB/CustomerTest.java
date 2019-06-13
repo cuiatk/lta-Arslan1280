@@ -26,6 +26,32 @@ public class CustomerTest {
 			assert true;
 		}
 	}
+
+	
+	@Test
+	public void testStatement2() {
+		me2.addRental(r1);
+		//fail("Not yet implemented");
+		String output2 = "Rental Record for Allah Ditta\r\n" + 
+				"	Speed	12.0";
+		if(output2.equals(me2.statement()))
+		{
+			assert true;
+		}
+	}
+
+	
+	@Test
+	public void testStatement3() {
+		me2.addRental(r2);
+		//fail("Not yet implemented");
+		String output3 = "Rental Record for Allah Ditta\r\n" + 
+				"	Spancer	33.5";
+		if(output3.equals(me2.statement()))
+		{
+			assert true;
+		}
+	}
 	/*
 	 * TODO 2			10 Marks
 	 * Provide at least two more test cases carefully chosen so that they satisfy our testing
